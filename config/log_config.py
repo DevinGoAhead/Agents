@@ -29,20 +29,17 @@ LOGGING_CONFIG = {
     },
     "root": {
         "handlers": ["console", "file"],
-        "level": "DEBUG",
+        "level": "WARNING",  # 默认屏蔽所有第三方库的调试/信息日志
     },
     "loggers": {
-        "httpx": {
-            "level": "WARNING",
+        "__main__": {  # 支持直接运行的脚本/Jupyter Cell
+            "level": "DEBUG",
         },
-        "httpcore": {
-            "level": "WARNING",
+        "foundations": {  # 支持 foundations 包下的模块
+            "level": "DEBUG",
         },
-        "openai": {
-            "level": "WARNING",
-        },
-        "urllib3": {
-            "level": "WARNING",
+        "config": {  # 支持 config 包下的模块
+            "level": "DEBUG",
         },
     },
 }
