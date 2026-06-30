@@ -1,7 +1,7 @@
 logs/
 
 .venv/
-
+output/
 .env
-pyproject.toml
 __pycache__/
+config/__pycache__
